@@ -16,3 +16,13 @@ User.hasMany(Comment, {
     foreignKey: 'user_id', // Create a foreign key 'user_id' in the Comment model to associate Comments with Users
     onDelete: 'CASCADE', // When a User is deleted, also delete their associated Comments
 });
+
+// A Comment belongs to a User (many-to-one relationship).
+Comment.belongsTo(User, {
+    foreignKey: 'user_id', // Create a foreign key 'user_id' in the Comment model to reference Users
+});
+
+// A Comment belongs to a Post (many-to-one relationship).
+Comment.belongsTo(Post, {
+    foreignKey: 'post_id', // Create a foreign key 'post_id' in the Comment model to reference Posts
+});
