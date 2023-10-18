@@ -9,6 +9,7 @@ class User extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password); // Compare the provided password with the stored hashed password
   }
+<<<<<<< HEAD
 }
 
 // Initialize the User model with the specified attributes and configuration
@@ -67,3 +68,6 @@ User.init(
 
 // Export the User model
 module.exports = User;
+=======
+}
+>>>>>>> 9dfa614 (coding the user model, made necessary imports, including bcrypt, made the user class, and instance method called checkPassowrd for validating epassword)
