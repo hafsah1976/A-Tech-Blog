@@ -1,4 +1,3 @@
-
 // Import necessary modules and dependencies
 const { Model, DataTypes } = require('sequelize'); // Import required Sequelize classes and modules
 const sequelize = require('../config/config'); // Import the Sequelize instance from a configuration file

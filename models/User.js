@@ -13,7 +13,7 @@ class User extends Model {
 // Initialize the User model with the specified attributes and configuration
 User.init(
   {
-    // Define the 'id' field
+    // Define the user's 'id' field
     id: {
       type: DataTypes.INTEGER, // Data type for the 'id' field (integer)
       allowNull: false, // 'id' cannot be null
