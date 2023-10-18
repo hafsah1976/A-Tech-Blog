@@ -1,0 +1,27 @@
+<!-- A card for the sign-up form -->
+<div class="bg-white shadow-md rounded-lg p-6 card">
+  <!-- Sign-up form title -->
+  <h3 class="text-2xl font-semibold mb-4 card-header">Sign Up</h3>
+  <form id="signup-form" class="card-body">
+    <!-- Label for the name input field -->
+    <label for="name-signup" class="block text-gray-700 text-sm font-bold mb-2 form-label">Name</label>
+    <input id="name-signup" type="text" class="w-full py-2 px-3 leading-tight text-gray-700 border rounded form-input" placeholder="Your Full Name" />
+
+    <!-- Label for the username input field -->
+    <label for="email-signup" class="block text-gray-700 text-sm font-bold mb-2 form-label">E-mail</label>
+    <input id="email-signup" type="text" class="w-full py-2 px-3 leading-tight text-gray-700 border rounded form-input" placeholder="Your E-mail" />
+
+    <!-- Label for the password input field -->
+    <label class="block text-gray-700 text-sm font-bold mb-2 form-label" for="password-signup">Password</label>
+    <input id="password-signup" type="password" class="w-full py-2 px-3 leading-tight text-gray-700 border rounded form-input" placeholder="Your Password" />
+
+    <!-- Submit button for the sign-up form -->
+    <button type="submit" class="w-full py-2 mt-4 text-white bg-blue-500 rounded btn hover:bg-blue-700">Signup!</button>
+
+    <!-- the login page -->
+    <a class="block text-blue-500 text-sm mt-4 login-link" href="/login">Log in instead</a>
+  </form>
+</div>
+
+<!-- JavaScript for handling sign-up functionality -->
+<script src="/javascript/signup.js"></script>
