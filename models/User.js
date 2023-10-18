@@ -65,5 +65,5 @@ User.init(
   }
 );
 
-// Export the User model
+// Export the User model to use in other parts of the application
 module.exports = User;
