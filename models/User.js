@@ -10,7 +10,6 @@ class User extends Model {
     return bcrypt.compareSync(loginPw, this.password); // Compare the provided password with the stored hashed password
   }
 }
-
 // Initialize the User model with the specified attributes and configuration
 User.init(
   {
@@ -65,5 +64,6 @@ User.init(
   }
 );
 
-// Export the User model
+// Export the User model to use in other parts of the application
 module.exports = User;
+
