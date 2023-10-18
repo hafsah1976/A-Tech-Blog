@@ -1,0 +1,6 @@
+<article class="post">
+    <!-- Loop through the 'posts' array and render the 'click-post' partial for each 'post' -->
+    {{#each posts as |post| }}
+        {{> click-post post}}
+    {{/each}}
+</article>
