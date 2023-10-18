@@ -1,0 +1,20 @@
+<!-- A card for creating a new post -->
+<div class="card">
+  <!-- Title for the card -->
+  <h3 class="card-header text-2xl font-semibold">Create New Post</h3>
+  <form class="card-body new-post-form" id="new-post-form">
+    <!-- Label for the post title input field -->
+    <label for="post-title" class="form-label">Post Title</label>
+    <input type="text" id="post-title" name="post-title" class="form-input w-full py-2 px-3 leading-tight text-gray-700 border rounded" />
+
+    <!-- Label for the content input field -->
+    <label class="form-label" for="content">Description</label>
+    <input id="description" name="description" class="form-input w-full py-2 px-3 leading-tight text-gray-700 border rounded" />
+
+    <!-- Button to submit the form -->
+    <button type="submit" class="btn bg-blue-500 text-white w-full py-2 rounded hover:bg-blue-700">Create</button>
+  </form>
+</div>
+
+<!-- JavaScript file for handling the creation of a new post -->
+<script src="/javascript/new-post.js"></script>
