@@ -1,0 +1,33 @@
+<!-- A card for the login form with a white background and shadow -->
+<div class="bg-white shadow-md rounded-lg p-6 card">
+  <!-- Login form title -->
+  <h3 class="text-2xl font-semibold mb-4 card-header">Login</h3>
+  <form id="login-form" class="card-body">
+    <!-- Label for the username input field -->
+    <label class="block text-gray-700 text-sm font-bold mb-2 form-label" for="email-login">Username</label>
+    <input
+      id="email-login"
+      type="text"
+      autofocus="true"
+      class="w-full py-2 px-3 leading-tight text-gray-700 border rounded form-input"
+    />
+
+    <!-- Label for the password input field -->
+    <label class="block text-gray-700 text-sm font-bold mb-2 form-label" for="password-login">Password</label>
+    <input
+      id="password-login"
+      type="password"
+      autofocus="true"
+      class="w-full py-2 px-3 leading-tight text-gray-700 border rounded form-input"
+    />
+
+    <!-- Submit button for the login form -->
+    <button type="submit" class="w-full py-2 mt-4 text-white bg-blue-500 rounded btn hover:bg-blue-700">Login!</button>
+
+    <!-- Link to the sign-up page -->
+    <a class="block text-blue-500 text-sm mt-4 login-link" href="/signup">Sign up instead</a>
+  </form>
+</div>
+
+<!-- JavaScript file for handling login functionality -->
+<script src="/javascript/login.js"></script>
