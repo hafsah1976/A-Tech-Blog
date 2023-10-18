@@ -1,18 +1,24 @@
+// Function to handle the submission of the sign-up form
 async function signupFormHandler(event) {
-    event.preventDefault();
+    event.preventDefault(); // Prevent the default form submission behavior
   
     // Get the values of the name, email, and password input fields
     const name = document.querySelector("#name-signup").value.trim();
     const email = document.querySelector("#email-signup").value.trim();
     const password = document.querySelector("#password-signup").value.trim();
   
+    // Get the loading indicator element
+    const loadingIndicator = document.querySelector("#loading-indicator");
+  
+    // Show the loading indicator
+    loadingIndicator.classList.remove("hidden");
+  
     // Client-side validation
     if (!name || !email || !password) {
       alert("Please fill in all fields.");
-      return;
+      loadingIndicator.classList.add("hidden"); // Hide the loading indicator
+      return; // Exit the function if validation fails
     }
-  
-    // Here I would include a loading indicator while waiting for the API response
   
     try {
       const response = await fetch("/api/users", {
@@ -27,14 +33,20 @@ async function signupFormHandler(event) {
   
       if (response.ok) {
         console.log("Success");
-        document.location.replace("/dashboard");
+        document.location.replace("/dashboard"); // Redirect to the dashboard upon successful sign-up
       } else {
+        // Attempt to parse the response data as JSON
         const data = await response.json();
-        alert(data.message || "Uh Oh! You may have entered invalid  credentials. Happens to the best of us. Please try again."); // Display error message if available
+  
+        // Display the server-provided error message, or a generic error message/ I will know more after running the app
+        alert(data.message || "An error occurred");
       }
     } catch (error) {
       console.error(error);
-      alert("Failed to sign up. Please try again later.");
+      alert("An error occurred. Please try again later.");
+    } finally {
+      // Hide the loading indicator whether the request succeeded or failed
+      loadingIndicator.classList.add("hidden");
     }
   }
   
