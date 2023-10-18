@@ -71,3 +71,38 @@ module.exports = User;
 =======
 }
 >>>>>>> 9dfa614 (coding the user model, made necessary imports, including bcrypt, made the user class, and instance method called checkPassowrd for validating epassword)
+
+// Initialize the User model with the specified attributes and configuration
+User.init(
+  {
+    // Define the 'id' field
+    id: {
+      type: DataTypes.INTEGER, // Data type for the 'id' field (integer)
+      allowNull: false, // 'id' cannot be null
+      primaryKey: true, // 'id' is the primary key
+      autoIncrement: true, // 'id' increments automatically
+    },
+    // Define the 'name' field
+    name: {
+      type: DataTypes.STRING, // Data type for the 'name' field (string)
+      allowNull: false, // 'name' cannot be null
+    },
+    // Define the 'email' field
+    email: {
+      type: DataTypes.STRING, // Data type for the 'email' field (string)
+      allowNull: false, // 'email' cannot be null
+      unique: true, // 'email' values must be unique
+      validate: {
+        isEmail: true, // Use Sequelize validation to ensure it's a valid email
+      },
+    },
+    // Define the 'password' field
+    password: {
+      type: DataTypes.STRING, // Data type for the 'password' field (string)
+      allowNull: false, // 'password' cannot be null
+      validate: {
+        len: [8], // Use Sequelize validation to require a minimum password length of 8 characters
+      },
+    },
+  },
+  {
