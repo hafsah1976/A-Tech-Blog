@@ -1,14 +1,14 @@
 {{> post-info post}}
 
 {{#if loggedIn}}
-<div>
-    <h3></h3>
+<div class="mt-4 p-4 bg-white rounded shadow-md">
+    <h3 class="text-xl font-semibold mb-2">Your Post Title</h3>
     <form id="comment-form">
 
-        <label>Comment</label>
-        <input id="comment" name="comment-body" />
+        <label class="text-gray-700">Comment</label>
+        <input id="comment" name="comment-body" class="w-full p-2 my-2 border rounded" />
 
-        <button type="submit">Submit</button>
+        <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Submit</button>
     </form>
 </div>
 {{/if}}
