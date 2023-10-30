@@ -1,0 +1,31 @@
+<div class="card">
+    <!-- Card Title -->
+    <h3 class="card-header">Update Your Post</h3>
+
+    <!-- Update Post Form -->
+    <form class="card-body edit-post-form">
+        <!-- Label for Post Title Input -->
+        <label for="post-title" class="form-label">Post Title</label>
+
+        <!-- Input for Post Title -->
+        <input name="post-title" type="text" value="{{post.postTitle}}" class="form-input" />
+
+        <!-- Label for Content Input -->
+        <label class="form-label" for="content">Content</label>
+
+        <!-- Input for Post Content -->
+        <input name="content" type="text" value="{{post.description}}" class="form-input" />
+
+        <!-- Button to Submit Form for Post Update -->
+        <button type="submit" class="btn">Update Post</button>
+
+        <!-- Button to Delete the Post (assuming it triggers JavaScript) -->
+        <button type="button" class="delete-post-btn btn">Delete Post</button>
+    </form>
+</div>
+
+<!-- JavaScript file for updating the post -->
+<script src="/javascript/update-post.js"></script>
+
+<!-- JavaScript file for deleting the post -->
+<script src="/javascript/delete-post.js"></script>
