@@ -1,26 +1,26 @@
-<div class="card">
+<div class="bg-white rounded shadow-md p-4">
     <!-- Card Title -->
-    <h3 class="card-header">Update Your Post</h3>
+    <h3 class="text-xl font-semibold mb-2">Update Your Post</h3>
 
     <!-- Update Post Form -->
-    <form class="card-body edit-post-form">
+    <form class="edit-post-form">
         <!-- Label for Post Title Input -->
-        <label for="post-title" class="form-label">Post Title</label>
+        <label for="post-title" class="text-gray-700 mb-1">Post Title</label>
 
         <!-- Input for Post Title -->
-        <input name="post-title" type="text" value="{{post.postTitle}}" class="form-input" />
+        <input name="post-title" type="text" value="{{post.postTitle}}" class="w-full p-2 mb-2 border rounded" />
 
         <!-- Label for Content Input -->
-        <label class="form-label" for="content">Content</label>
+        <label class="text-gray-700 mb-1" for="content">Content</label>
 
         <!-- Input for Post Content -->
-        <input name="content" type="text" value="{{post.description}}" class="form-input" />
+        <input name="content" type="text" value="{{post.description}}" class="w-full p-2 mb-2 border rounded" />
 
         <!-- Button to Submit Form for Post Update -->
-        <button type="submit" class="btn">Update Post</button>
+        <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Update Post</button>
 
         <!-- Button to Delete the Post (assuming it triggers JavaScript) -->
-        <button type="button" class="delete-post-btn btn">Delete Post</button>
+        <button type="button" class="delete-post-btn px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Delete Post</button>
     </form>
 </div>
 
