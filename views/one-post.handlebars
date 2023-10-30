@@ -1,20 +1,20 @@
-{{> post-info post}}
+{{> post-info post}} <!-- Include post information using a partial template -->
 
 {{#if loggedIn}}
-<div class="mt-4 p-4 bg-white rounded shadow-md">
-    <h3 class="text-xl font-semibold mb-2">Your Post Title</h3>
-    <form id="comment-form">
+<div class="mt-4 p-4 bg-white rounded shadow-md"> <!-- Start a container for logged-in users -->
+    <h3 class="text-xl font-semibold mb-2">Your Post Title</h3> <!-- Heading for the post title -->
+    <form id="comment-form"> <!-- Form for posting a comment -->
 
-        <label class="text-gray-700">Comment</label>
-        <input id="comment" name="comment-body" class="w-full p-2 my-2 border rounded" />
+        <label class="text-gray-700">Comment</label> <!-- Label for the comment input field -->
+        <input id="comment" name="comment-body" class="w-full p-2 my-2 border rounded" /> <!-- Input field for the comment body with styling -->
 
-        <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Submit</button>
+        <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Submit</button> <!-- Submit button for the form with styling and hover effect -->
     </form>
-</div>
+</div> <!-- End of the container for logged-in users -->
 {{/if}}
 
-{{> comments post.comments}}
+{{> comments post.comments}} <!-- Include comments using a partial template for post comments -->
 
 {{#if loggedIn}}
-<script src="/javascript/comment.js"></script>
+<script src="/javascript/comment.js"></script> <!-- Include a JavaScript file for handling comments -->
 {{/if}}
